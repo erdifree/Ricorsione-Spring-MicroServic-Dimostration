@@ -50,7 +50,7 @@ public class AttivitàService {
         return true;
     }
 
-    public boolean isStatoFinale(String alias) {
+    private boolean isStatoFinale(String alias) {
         Attivita attivita = attivitaRepository.findByAlias(alias);
         if (attivita == null) {
             throw new IllegalArgumentException("Attivita non trovata per alias: " + alias);
